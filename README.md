@@ -6,13 +6,25 @@ This repository contains my code and notes from the **TypeScript Beginner Crash 
 
 To compile and run the TypeScript files in this repository:
 
-1. **Install TypeScript globally:**
+1. **Install dependencies locally:**
    ```bash
-   npm install -g typescript
+   npm install
+   ```
 
-2. **IInitialize Configuration:**
+2. **Compile the project:**
    ```bash
-   tsc --init
+   npm run build
+   ```
+
+3. **Type-check without emitting files:**
+   ```bash
+   npm run typecheck
+   ```
+
+You can also run the local compiler directly with:
+```bash
+npx tsc
+```
 
 ## 📚 Key Concepts Covered
 
