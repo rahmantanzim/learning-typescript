@@ -113,3 +113,39 @@
 // printErrorMessage(LoginError.WrongCred);
 
 
+class StorageContainer<T>{ // T is like a placeholder for different data types that we use
+    private contents : T[];
+    constructor(){
+        this.contents = [];
+    }
+    addItem(item: T):void{
+        this.contents.push(item)
+    }
+    getItem(idx:number):T | undefined{
+        return this.contents[idx];
+    
+    }
+
+}
+const container1 = new StorageContainer<string>();
+container1.addItem("Tanzim");
+container1.addItem("Rahman");
+console.log(container1.getItem(1));
+
+//read only variables
+interface Runner {
+    readonly runnerId: number,
+    name: string,
+    max_speed: number,
+    count_medal: number,
+    first_ran: Date
+}
+
+const runner: Runner = {
+    runnerId: 1,
+    name: "Tanzim",
+    max_speed: 100,
+    count_medal: 0,
+    first_ran: new Date()
+
+}
